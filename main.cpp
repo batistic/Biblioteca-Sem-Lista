@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Exemplar.h"
 #include "Emprestimo.h"
 #include "Biblioteca.h"
 #include "Cliente.h"
@@ -12,19 +13,22 @@ biblioteca.cadastrar_cliente(cliente);
 int main(){
   int aux;
   int id;
+  double cpf_cliente;
   string nome_livro;
   do{
    cout<<"1. Emprestimo"<<endl;
    cout<<"2. Devolucao"<<endl;
-   cout<<"3. Cadastrar Cliente"<<endl;
-   cout<<"4. Cadastrar Livro"<<endl;
+   cout<<"3. Cadastrar cliente"<<endl;
+   cout<<"4. Cadastrar livro"<<endl;
    cout<<"5. Consultar livro"<<endl;
    cout<<"6. Consultar cliente"<<endl;
    cout<<"7. Cadastrar exemplar"<<endl;
-   cout<<"8. Excluir livros"<<endl;
-   cout<<"9. Excluir cliente"<<endl;
-   cout<<"10. Excluir exemplar"<<endl;
-   cout<<"11. Relatorios" <<endl;
+   cout<<"8. Editar livro"<<endl;
+   cout<<"9. Editar cliente"<<endl;
+   cout<<"10. Excluir cliente"<<endl;
+   cout<<"11. Excluir livro"<<endl;
+   cout<<"12. Excluir exemplar"<<endl;
+   cout<<"13. Relatorios" <<endl;
    cout<<"0. Sair"<<endl;
    cin >> aux;
 }
@@ -62,7 +66,7 @@ while(aux!=0);
     }
     break;
   case 6 :
-  	double cpf_cliente;
+
     std::cout << "Digite o CPF do cliente: ";
     std::cin >> cpf_cliente;
     biblioteca.cosulta_cliente(cpf_cliente);
@@ -73,22 +77,31 @@ while(aux!=0);
     biblioteca.cadastrar_exemplar(id);
     break;
   case 8 :
+    std::cout << "Digite o CPF do cliente: ";
+    std::cin >> cpf_cliente;
+    	biblioteca.editar_cliente(cpf_cliente);
+    break;
+  case 9 :
+   std::cout << "Digite o ID do livro: ";
+   std::cin >> id;
+    biblioteca.editar_livro(id);
+    break
+  case 10 :
   std::cout << "Digite o ID do livro: ";
   std::cin >> id;
     biblioteca.remover_livro(id);
     break;
-  case 9 :
-    double cpf_cliente;
+  case 11 :
     std::cout << "Digite o CPF do cliente: ";
     std::cin >> cpf_cliente;
     biblioteca.remover_cliente(cpf_cliente);
     break;
-  case 10 :
+  case 12 :
     std::cout << "Digite o ID do livro: ";
     std::cin >> id;
     biblioteca.remover_exemplar(id);
     break;
-	case 11 :
+	case 13 :
 		int aux_l;
 		int aux_g;
 		std::cout << "1. Gerar relatorio de livro" << '\n';

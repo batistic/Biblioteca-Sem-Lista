@@ -1,4 +1,10 @@
+#include <iostream>
+#include "Exemplar.h"
 #include "Emprestimo.h"
+#include "Biblioteca.h"
+#include "Cliente.h"
+#include "Livro.h"
+using namespace std;
 
 Emprestimo::Emprestimo(	double cliente, int livro, int exemplar, 
 						int dataI[], int dataF[], int n) {
@@ -20,9 +26,9 @@ int Emprestimo::getLivro(){ return id_livro; }
 
 int Emprestimo::getExemplar(){ return id_exemplar; }
 
-int Emprestimo::getDataEmprestimo(){ return dataEmprestimo; }
+int* Emprestimo::getDataEmprestimo(){ return dataEmprestimo; }
 
-int Emprestimo::getDataEntrega(){ return dataEntrega; }
+int* Emprestimo::getDataEntrega(){ return dataEntrega; }
 
 bool Emprestimo::verificarEntrega(){ return entregue; }
 

@@ -1,6 +1,12 @@
 #ifndef LIVRO_H
 #define LIVRO_H
+#include <iostream>
 #include "Exemplar.h"
+#include "Emprestimo.h"
+#include "Biblioteca.h"
+#include "Cliente.h"
+#include "Livro.h"
+using namespace std;
 
 class Livro
 {
@@ -32,7 +38,7 @@ class Livro
 		string titulo;
 		string autor;
 		string genero;
-		strig editora;
+		string editora;
 		int edicao;
 		int num_paginas;
 		int ano;

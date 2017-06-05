@@ -1,5 +1,10 @@
+#include <iostream>
+#include "Exemplar.h"
+#include "Emprestimo.h"
+#include "Biblioteca.h"
 #include "Cliente.h"
-
+#include "Livro.h"
+using namespace std;
 
 Cliente::Cliente(){
   std::cout << "CPF: ";
@@ -49,13 +54,24 @@ Cliente::Cliente(){
   this.ativo = true;
 }
 
+void Cliente::mostrar_dados(){
+  std::cout << "CPF: " << this.CPF << '\n';
+  std::cout << "Nome: " << this.nome << '\n';
+  std::cout << "Sexo: " << this.sexo << '\n';
+  std::cout << "4. Data de nascimento: " << this.data_nasc[0] << "/" << this.data_nasc[1] << "/" << this.data_nasc[2] << '\n';
+  std::cout << "CEP: " << this.CEP << '\n';
+  std::cout << "Endereco: " << this.endereco << '\n';
+  std::cout << "Telefone: " << this.telefone << '\n';
+  std::cout << "Email: " << this.email << '\n';
+  std::cout << "Emprestimos: " << this.emprestimos << '\n';
+}
 
-int editar_cadastro(){
+int Cliente::editar_cadastro(){
   int resposta = 9;
   std::cout << "1. CPF: " << this.CPF << '\n';
   std::cout << "2. Nome: " << this.nome << '\n';
   std::cout << "3. Sexo: " << this.sexo << '\n';
-  std::cout << "4. Data de nascimento: " << this.data_nasc[3] << '\n';
+  std::cout << "4. Data de nascimento: " << this.data_nasc[0] << "/" << this.data_nasc[1] << "/" << this.data_nasc[2] << '\n';
   std::cout << "5. CEP: " << this.CEP << '\n';
   std::cout << "6. Endereco: " << this.endereco << '\n';
   std::cout << "7. Telefone: " << this.telefone << '\n';
@@ -100,25 +116,37 @@ int editar_cadastro(){
     std::cin >> this.email;
   }
   else{
-    system("cls");
+    //system("cls");
     std::cout << "Opcao invalida. Insira novamente o numero referente a informacao que deseja editar." << '\n';
+    std::cout << "1. CPF: " << this.CPF << '\n';
+  	std::cout << "2. Nome: " << this.nome << '\n';
+	std::cout << "3. Sexo: " << this.sexo << '\n';
+	std::cout << "4. Data de nascimento: " << this.data_nasc[3] << '\n';
+	std::cout << "5. CEP: " << this.CEP << '\n';
+	std::cout << "6. Endereco: " << this.endereco << '\n';
+	std::cout << "7. Telefone: " << this.telefone << '\n';
+	std::cout << "8. Email: " << this.email << '\n';
     std::cout << "Insira o numero referente a informacao que deseja editar ou "0" Sair";
   }
   }
   return 0;
 }
 
-bool getAtivo(){
+void Cliente::adicionarEmprestimo(){
+	this.emprestimos++;
+}
+
+bool Cliente::getAtivo(){
   return this.ativo;
 }
 
-void setAtivo(bool at){
+void Cliente::setAtivo(bool at){
   this.ativo = at;
 }
 
-double get_CPF(){
+double Cliente::get_CPF(){
   return this.CPF;
 }
-string get_Nome(){
+string Cliente::get_Nome(){
   return this.nome;
 }

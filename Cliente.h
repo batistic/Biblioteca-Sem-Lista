@@ -1,5 +1,11 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
+#include <iostream>
+#include "Exemplar.h"
+#include "Emprestimo.h"
+#include "Biblioteca.h"
+#include "Livro.h"
+using namespace std;
 
 class Cliente
 {
@@ -7,7 +13,9 @@ class Cliente
 
 		Cliente();
 				~Cliente();
+				void mostrar_dados();
 				int editar_cadastro();
+				void adicionarEmprestimo();
 				bool getAtivo();
 				void setAtivo(bool);
 				double get_CPF();
@@ -22,6 +30,7 @@ class Cliente
 				int CEP;
 				int telefone;
 				string email;
+				int emprestimos;
 				bool pendencia;
 				bool multa;
 				int limite_emp;

@@ -1,4 +1,10 @@
+#include <iostream>
+#include "Exemplar.h"
+#include "Emprestimo.h"
 #include "Biblioteca.h"
+#include "Cliente.h"
+#include "Livro.h"
+using namespace std;
 
 Biblioteca::Biblioteca(){
 	nClientes = 0;
@@ -33,6 +39,7 @@ int Biblioteca::realizar_emprestimo(){
 	if(livros[id_livro].disponivel() > 0){
 		emprestimos[nEmprestimos] = new Emprestimo(cpf_cliente,id_livro,livros[id_livro].exemplar_disp(),d1,d2,nEmprestimos);
 		nEmprestimos++;
+		this.consultar_clientes(cpf_cliente).adicionarEmprestimo();
 	}
 	else{
 		cout << "Nenhum exemplar disponivel! Tente outro dia." << endl;
@@ -103,42 +110,61 @@ int Biblioteca::remover_exemplar(int n){
 }
 
 int Biblioteca::remover_cliente(double n){
-	int i;
-	for(i=0;i<nClientes;i++){
-		if(n == clientes[i].get_CPF()){
-			clientes[i].setAtivo(false);
-			break;
-		}
-	}
+	this.consultar_clientes(n).setAtivo(false);
 }
 
 int Biblioteca::editar_cliente(double n){
+	this.consultar_clientes(n).editar_cadastro();
+}
+
+int Biblioteca::editar_livro(int n){
+	livros[n].editar_dados();
+}
+
+int Biblioteca::relatorio_livro(int n){
+	livros[n].mostrar_dados();
+}
+
+int Biblioteca::relatorio_livro(string nome){
+	this.consutar_livros(nome).mostrar_dados();
+}
+
+int Biblioteca::relatorio_livros(){
+	cout << "Quantidade de livros diferentes: " << nLivros << endl;
+	int i, ex=0, disp=0, popular, maior=-1;
+	for(i=0;i<nLivros;i++){
+		ex += livros[i].getQtd_exemplares();
+		disp += livros[i].disponivel();
+		if(livros[i].getEmprestimos() > maior){
+			popular = i;
+			maior = livros[i].getEmprestimos();
+		}
+	}
+	cout << "Quantidade de exemplares: " << ex << endl;
+	cout << "Exemplares em emprestimo: " << (ex-disp) << endl;
+	cout << "Livro mais emprestado: " << livros[popular].getTitulo() << " (" << maior << ")" << endl ;
+	
+	
+}
+
+int Biblioteca::relatorio_cliente(double n){
+	Cliente aux = this.consultar_clientes(n);
+	aux.mostrar_dados();
 	int i;
-	for(i=0;i<nClientes;i++){
-		if(n == clientes[i].get_CPF()){
-			clientes[i].editar_cadastro();
-			break;
+	for(i=0;i<nEmprestimos;i++){
+		if(emprestimos[i].getCliente == n){
+			cout << "Livro: " << livros[emprestimos[i].getLivro()].getTitulo() << endl;
+			cout << "Data do emprestimo: "  << emprestimos[i].getDataEmprestimo()[0] << "/" << emprestimos[i].getDataEmprestimo()[1] << "/" << emprestimos[i].getDataEmprestimo()[2] << endl;
+			if(emprestimos[i].verificarEntrega() == true)
+				cout << "Entregue" << endl;
+			else{
+				cout << "Nao entregue. Data maxima de entrega: " << emprestimos[i].getDataEntrega()[0] << "/" << emprestimos[i].getDataEntrega()[1] << "/" << emprestimos[i].getDataEntrega()[2] << endl;
+			}
 		}
 	}
 }
 
-int Biblioteca::editar_livro(){
-	
-}
-
-int Biblioteca::relatorio_livro(){
-	
-}
-
-int Biblioteca::relatorio_livros(){
-	
-}
-
-int Biblioteca::relatorio_cliente(){
-	
-}
-
 int Biblioteca::relatorio_clientes(){
-	
+	cout << "Numero de clientes cadastrados: " << nClientes << endl;
 }
 
