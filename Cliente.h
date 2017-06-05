@@ -24,6 +24,7 @@ class Cliente
 				bool multa;
 				int limite_emp;
 				int prazo_padrao;
+				int modalidade;
 
 
 
