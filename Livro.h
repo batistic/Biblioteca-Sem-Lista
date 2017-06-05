@@ -1,9 +1,10 @@
 #ifndef LIVRO_H
 #define LIVRO_H
+#pragma once
 #include <iostream>
 #include "Exemplar.h"
 #include "Emprestimo.h"
-#include "Biblioteca.h"
+//#include "Biblioteca.h"
 #include "Cliente.h"
 using namespace std;
 

@@ -1,10 +1,11 @@
 #ifndef EXEMPLAR_H
 #define EXEMPLAR_H
+#pragma once
 #include <iostream>
 #include "Emprestimo.h"
-#include "Biblioteca.h"
+//#include "Biblioteca.h"
 #include "Cliente.h"
-#include "Livro.h"
+//#include "Livro.h"
 using namespace std;
 
 class Exemplar

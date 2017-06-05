@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Exemplar.h"
+//#include "Exemplar.h"
 #include "Emprestimo.h"
-#include "Biblioteca.h"
+//#include "Biblioteca.h"
 #include "Cliente.h"
 #include "Livro.h"
 using namespace std;
@@ -53,25 +53,25 @@ Livro::livro(){
 }
 
 Livro::Livro(int n){
-	cout >> "Titulo: ";
-	cin << titulo;
+	cout << "Titulo: ";
+	cin >> titulo;
 	cout >> "Autor: ";
-	cin << autor;
-	cout >> "Genero: ";
-	cin << genero;
-	cout >> "Editora: ";
-	cin << editora;
-	cout >> "Edicao: ";
-	cin << edicao;
-	cout >> "Ano: ";
-	cin << ano;
-	cout >> "Numero de paginas: ";
-	cin << num_paginas;
-	cout >> "Quantidade de exemplares: ";
-	cin << nExemplares;
+	cin >> autor;
+	cout << "Genero: ";
+	cin >> genero;
+	cout << "Editora: ";
+	cin >> editora;
+	cout << "Edicao: ";
+	cin >> edicao;
+	cout << "Ano: ";
+	cin >> ano;
+	cout << "Numero de paginas: ";
+	cin >> num_paginas;
+	cout << "Quantidade de exemplares: ";
+	cin >> nExemplares;
 
 	id_livro = n;
-	cout >> "ID: " >> id_livro;
+	cout << "ID: " << id_livro;
 
 	cadastrar_exemplares(nExemplares);
 
@@ -82,55 +82,55 @@ Livro::Livro(int n){
 
 void Livro::editar_dados(){
 	int opc=8;
-	cout >> "ID: " >> id_livro >> endl;
-	cout >> "1. Titulo: " >> titulo >> endl;
-	cout >> "2. Autor: " >> autor >> endl;
-	cout >> "3. Genero: " >> genero >> endl;
-	cout >> "4. Editora: " >> editora >> endl;
-	cout >> "5. Edicao: " >> edicao >> endl;
-	cout >> "6. Ano: " >> ano >> endl;
-	cout >> "7. Numero de paginas: " >> num_paginas >> endl;
+	cout << "ID: " << id_livro << endl;
+	cout << "1. Titulo: " << titulo << endl;
+	cout << "2. Autor: " << autor << endl;
+	cout << "3. Genero: " << genero << endl;
+	cout << "4. Editora: " << editora << endl;
+	cout << "5. Edicao: " << edicao << endl;
+	cout << "6. Ano: " << ano << endl;
+	cout << "7. Numero de paginas: " << num_paginas << endl;
 	while(opc != 0){
 		cout << "Insira o numero referente a informacao que deseja editar ou "0" Sair"<<endl<<": ";
   		cin >> opc;
   		switch(opc){
-  			case 1: cout >> "Titulo: ";
-					cin << titulo;
+  			case 1: cout << "Titulo: ";
+					cin >> titulo;
 			  		break;
-			case 2: cout >> "Autor: ";
-					cin << autor;
+			case 2: cout << "Autor: ";
+					cin >> autor;
 			  		break;
-			case 3: cout >> "Genero: ";
-					cin << genero;
+			case 3: cout << "Genero: ";
+					cin >> genero;
 			  		break;
-			case 4: cout >> "Editora: ";
-					cin << editora;
+			case 4: cout << "Editora: ";
+					cin >> editora;
 			  		break;
-			case 5: cout >> "Edicao: ";
-					cin << edicao;
+			case 5: cout << "Edicao: ";
+					cin >> edicao;
 			  		break;
-			case 6: cout >> "Ano: ";
-					cin << ano;
+			case 6: cout << "Ano: ";
+					cin >> ano;
 			  		break;
-			case 7: cout >> "Numero de paginas: ";
-					cin << num_paginas;
+			case 7: cout << "Numero de paginas: ";
+					cin >> num_paginas;
 			  		break;
 		}
 	}
 }
 
 void Livro::mostrar_dados(){
-	cout >> "ID: " >> id_livro >> endl;
-	cout >> "Titulo: " >> titulo >> endl;
-	cout >> "Autor: " >> autor >> endl;
-	cout >> "Genero: " >> genero >> endl;
-	cout >> "Editora: " >> editora >> endl;
-	cout >> "Edicao: " >> edicao >> endl;
-	cout >> "Ano: " >> ano >> endl;
-	cout >> "Numero de paginas: " >> num_paginas >> endl;
-	cout >> "Quantidade de exemplares: " >> nExemplares >> endl;
-	cout >> "Exemplares disponiveis: " >> disponivel() >> endl;
-	cout >> "Quantidade de emprestimos ja feitos: " >> emprestimos >> endl;
+	cout << "ID: " << id_livro << endl;
+	cout << "Titulo: " << titulo << endl;
+	cout << "Autor: " << autor << endl;
+	cout << "Genero: " << genero << endl;
+	cout << "Editora: " << editora << endl;
+	cout << "Edicao: " << edicao << endl;
+	cout << "Ano: " << ano << endl;
+	cout << "Numero de paginas: " << num_paginas << endl;
+	cout << "Quantidade de exemplares: " << nExemplares << endl;
+	cout << "Exemplares disponiveis: " << disponivel() << endl;
+	cout << "Quantidade de emprestimos ja feitos: " << emprestimos << endl;
 }
 
 void Livro::setQtd_exemplares(int n){

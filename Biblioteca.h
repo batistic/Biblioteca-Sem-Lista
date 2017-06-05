@@ -1,5 +1,6 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
+#pragma once
 #include <iostream>
 #include "Exemplar.h"
 #include "Cliente.h"

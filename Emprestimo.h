@@ -1,8 +1,9 @@
 #ifndef EMPRESTIMO_H
 #define EMPRESTIMO_H
+#pragma once
 #include <iostream>
 #include "Exemplar.h"
-#include "Biblioteca.h"
+//#include "Biblioteca.h"
 #include "Cliente.h"
 #include "Livro.h"
 using namespace std;

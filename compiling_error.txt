@@ -1,14 +1,7 @@
-In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Cliente.h:7:0,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:5,
+In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Cliente.h:8:0,
+                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:7,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:5,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.h:49:3: error: 'Exemplar' does not name a type
+                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:3:
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.h:50:3: error: 'Exemplar' does not name a type
    Exemplar exemplares[100];
-   ^
-In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:5:0,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:38:3: error: 'Emprestimo' does not name a type
-   Emprestimo emprestimos[100];
    ^

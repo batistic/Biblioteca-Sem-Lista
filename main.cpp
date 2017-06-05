@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Exemplar.h"
+//#include "Exemplar.h"
 #include "Emprestimo.h"
 #include "Biblioteca.h"
 #include "Cliente.h"

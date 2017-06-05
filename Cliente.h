@@ -1,9 +1,10 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
+#pragma once
 #include <iostream>
 #include "Exemplar.h"
 #include "Emprestimo.h"
-#include "Biblioteca.h"
+//#include "Biblioteca.h"
 #include "Livro.h"
 using namespace std;
 
@@ -12,7 +13,6 @@ class Cliente
 	public:
 
 		Cliente();
-				~Cliente();
 				void mostrar_dados();
 				int editar_cadastro();
 				void adicionarEmprestimo();
