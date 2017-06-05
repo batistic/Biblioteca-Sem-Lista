@@ -1,8 +1,10 @@
 #include "Emprestimo.h"
 
-Emprestimo::Emprestimo(	double cliente, int exemplar, 
-						int dataI[], int dataF[]) {
-	id = exemplar;
+Emprestimo::Emprestimo(	double cliente, int livro, int exemplar, 
+						int dataI[], int dataF[], int n) {
+	id = n;
+	id_livro = livro;
+	id_exemplar = exemplar;
 	cpf = cliente;
 	int i;
 	for (i = 0; i < 3; ++i) {
@@ -14,7 +16,9 @@ Emprestimo::Emprestimo(	double cliente, int exemplar,
 
 double Emprestimo::getCliente(){ return cpf; }
 
-int Emprestimo::getExemplar(){ return id; }
+int Emprestimo::getLivro(){ return id_livro; }
+
+int Emprestimo::getExemplar(){ return id_exemplar; }
 
 int Emprestimo::getDataEmprestimo(){ return dataEmprestimo; }
 

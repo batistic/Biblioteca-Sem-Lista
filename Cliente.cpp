@@ -46,6 +46,7 @@ Cliente::Cliente(){
   }
   this.pendencia = 0;
   this.multa = 0;
+  this.ativo = true;
 }
 
 
@@ -107,7 +108,15 @@ int editar_cadastro(){
   return 0;
 }
 
-int get_CPF(){
+bool getAtivo(){
+  return this.ativo;
+}
+
+void setAtivo(bool at){
+  this.ativo = at;
+}
+
+double get_CPF(){
   return this.CPF;
 }
 string get_Nome(){

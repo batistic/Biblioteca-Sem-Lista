@@ -5,18 +5,19 @@
 class Biblioteca
 {
 	public:
+		Biblioteca();
 		int cadastrar_cliente();
 		int realizar_emprestimo();
 		int realizar_devolucao();
 		int cadastrar_livros();
-		Livros consutar_livros(Titulo);
-		Livros consultar_livros(ID);
-		Cliente consultar_clientes();
-		int cadastrar_exemplar();
-		int remover_livros();
-		int remover_exemplar();
-		int remover_cliente();
-		int editar_cliente();
+		Livros consutar_livros(string);
+		Livros consultar_livros(int);
+		Cliente consultar_clientes(double);
+		int cadastrar_exemplar(int);
+		int remover_livro(int);
+		int remover_exemplar(int);
+		int remover_cliente(double);
+		int editar_cliente(double);
 		int editar_livro();
 		int relatorio_livro();
 		int relatorio_livros();
@@ -24,13 +25,11 @@ class Biblioteca
 		int relatorio_clientes();
 	protected:
 		Cliente clientes[100];
-		int nclientes;
+		int nClientes;
 		Livro livros[100];
-		int nlivros;
+		int nLivros;
 		Emprestimo emprestimo[100];
-		int nemprestimos
-		Exemplar exemplar[100];
-		int nexemplar;
+		int nEmprestimos;
 
 };
 

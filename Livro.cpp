@@ -24,7 +24,12 @@ Livro::Livro(int id){
 	cadastrar_exemplares(nExemplares);
 	
 	lista_reserva = false;
+	ativo = true;
 	emprestimos = 0;
+}
+
+void Livro::editar_dados(){
+	// todo
 }
 
 void Livro::mostrar_dados(){
@@ -58,6 +63,17 @@ int Livro::adicionar_exemplar(){
 	nExemplares++;
 }
 
+int Livro::remover_exemplar(int n){
+	exemplares[n].setAtivo(false);
+}
+
+int Livro::exemplar_disp(){
+	int i;
+	for(i=0;i<nExemplares;i++)
+		if(exemplares[i].getDisp == true)
+			return i;
+}
+
 int Livro::disponivel(){
 	int i,n=0;
 	for(i=0;i<nExemplares;i++){
@@ -65,6 +81,14 @@ int Livro::disponivel(){
 			n++;
 	}
 	return n;
+}
+
+void setAtivo(bool at){
+	this.ativo = at;
+}
+
+bool getAtivo(){
+	return this.ativo;
 }
 
 int Livro::getID(){

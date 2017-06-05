@@ -6,11 +6,16 @@ class Livro
 {
 	public:
 		Livro(int);
+		void editar_dados();
 		void mostrar_dados();
 		void setQtd_exemplares(int);
 		int cadastrar_exemplares(int);
 		int adicionar_exemplar();
+		int remover_exemplar(int);
+		int exemplar_disp();
 		int disponivel();
+		void setAtivo(bool);
+		bool getAtivo();
 		int getID();
 		string getTitulo();
 		string getAutor();
@@ -34,6 +39,7 @@ class Livro
 		Exemplar exemplares[100];
 		int nExemplares;
 		bool lista_reserva;
+		bool ativo;
 		int emprestimos;
 };
 

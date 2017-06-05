@@ -4,8 +4,9 @@
 class Emprestimo
 {
 	public:
-		Emprestimo(double, int, int, int);
+		Emprestimo(double, int, int, int, int, int);
 		double getCliente(void);
+		int getLivro(void);
 		int getExemplar(void);
 		int getDataEmprestimo(void);
 		int getDataEntrega(void);
@@ -13,6 +14,8 @@ class Emprestimo
 		int entregar(void);
 	private:
 		int id;
+		int id_livro;
+		int id_exemplar;
 		double cpf;
 		int dataEntrega[3];
 		int getDataEmprestimo[3];
