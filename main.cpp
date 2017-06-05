@@ -6,9 +6,7 @@
 #include "Livro.h"
 using namespace std;
 
-Biblioteca biblioteca;
-Emprestimo emprestimo;
-biblioteca.cadastrar_cliente(cliente);
+Biblioteca biblio;
 
 int main(){
   int aux;
@@ -36,19 +34,19 @@ while(aux!=0);
 
  switch (aux){
    case 1 :
-    biblioteca.realizar_emprestimo();
+    biblio.realizar_emprestimo();
     break;
   case 2 :
-    biblioteca.realizar_devolucao();
+    biblio.realizar_devolucao();
     break;
   case 3 :
-    biblioteca.cadastrar_cliente();
+    biblio.cadastrar_cliente();
     break;
   case 4 :
-    biblioteca.cadastrar_livro();
+    biblio.cadastrar_livro();
     break;
   case 5 :
-    int aux_l
+    int aux_l;
 
     int nome_livro;
       cout<<"1. Por ID"<<endl;
@@ -57,52 +55,51 @@ while(aux!=0);
     if (aux_l==1){
       std::cout << "Digite o ID: ";
       std::cin >> id;
-      biblioteca.consulta_livro(id);
+      biblio.consultar_livro(id);
     }
       else if(aux_l==2){
         std::cout << "Digite o nome do livro: ";
         std::cin >> nome_livro;
-        biblioteca.consulta_livro(nome_livro);
+        biblio.consultar_livro(nome_livro);
     }
     break;
   case 6 :
 
     std::cout << "Digite o CPF do cliente: ";
     std::cin >> cpf_cliente;
-    biblioteca.cosulta_cliente(cpf_cliente);
+    biblio.consultar_cliente(cpf_cliente);
     break;
   case 7 :
   std::cout << "Digite o ID do livro: ";
   std::cin >> id;
-    biblioteca.cadastrar_exemplar(id);
+    biblio.cadastrar_exemplar(id);
     break;
   case 8 :
     std::cout << "Digite o CPF do cliente: ";
     std::cin >> cpf_cliente;
-    	biblioteca.editar_cliente(cpf_cliente);
+    	biblio.editar_cliente(cpf_cliente);
     break;
   case 9 :
    std::cout << "Digite o ID do livro: ";
    std::cin >> id;
-    biblioteca.editar_livro(id);
-    break
+    biblio.editar_livro(id);
+    break;
   case 10 :
   std::cout << "Digite o ID do livro: ";
   std::cin >> id;
-    biblioteca.remover_livro(id);
+    biblio.remover_livro(id);
     break;
   case 11 :
     std::cout << "Digite o CPF do cliente: ";
     std::cin >> cpf_cliente;
-    biblioteca.remover_cliente(cpf_cliente);
+    biblio.remover_cliente(cpf_cliente);
     break;
   case 12 :
     std::cout << "Digite o ID do livro: ";
     std::cin >> id;
-    biblioteca.remover_exemplar(id);
+    biblio.remover_exemplar(id);
     break;
 	case 13 :
-		int aux_l;
 		int aux_g;
 		std::cout << "1. Gerar relatorio de livro" << '\n';
 		std::cout << "2. Gerar relatorio de livros" << '\n';
@@ -119,24 +116,24 @@ while(aux!=0);
 			if (aux_l==1){
 				std::cout << "Digite o ID: ";
 				std::cin >> id;
-				biblioteca.relatorio_livro(id);
+				biblio.relatorio_livro(id);
 			}
 				else if(aux_l==2){
 					std::cout << "Digite o nome do livro: ";
 					std::cin >> nome_livro;
-					biblioteca.relatorio_livro(nome_livro);
+					biblio.relatorio_livro(nome_livro);
 			} break;
 
 			case 2:
-				biblioteca.relatorio_livros();
+				biblio.relatorio_livros();
 				break;
 			case 3:
 				std::cout << "Digite o CPF do cliente: ";
 				std::cin >> cpf_cliente;
-				biblioteca.relatorio_cliente(cpf_cliente);
+				biblio.relatorio_cliente(cpf_cliente);
 				break;
 			case 4:
-				biblioteca.relatorio_clientes();
+				biblio.relatorio_clientes();
 				break;
 
 		}

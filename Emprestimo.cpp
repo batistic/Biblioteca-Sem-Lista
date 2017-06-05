@@ -6,8 +6,11 @@
 #include "Livro.h"
 using namespace std;
 
-Emprestimo::Emprestimo(	double cliente, int livro, int exemplar, 
-						int dataI[], int dataF[], int n) {
+Emprestimo::Emprestimo(){
+
+}
+
+Emprestimo::Emprestimo(	double cliente, int livro, int exemplar, int dataI[], int dataF[], int n) {
 	id = n;
 	id_livro = livro;
 	id_exemplar = exemplar;
@@ -48,4 +51,4 @@ int Emprestimo::verificarData(int dtA[], int dtB[]) {
 int Emprestimo::entregar(int data[]){
 	entregue = true;
 	return verificarData(data, dataEntrega);
-}"
+}

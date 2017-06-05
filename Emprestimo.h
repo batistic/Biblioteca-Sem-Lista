@@ -10,6 +10,7 @@ using namespace std;
 class Emprestimo
 {
 	public:
+		Emprestimo();
 		Emprestimo(double, int, int, int, int, int);
 		double getCliente(void);
 		int getLivro(void);
@@ -18,16 +19,15 @@ class Emprestimo
 		int* getDataEntrega(void);
 		bool verificarEntrega(void);
 		int entregar(void);
-	private:
+	protected:
 		int id;
 		int id_livro;
 		int id_exemplar;
 		double cpf;
 		int dataEntrega[3];
-		int getDataEmprestimo[3];
+		int DataEmprestimo[3];
 		bool entregue;
 		int verificarData(int, int);
 };
 
 #endif
-

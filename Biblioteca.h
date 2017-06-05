@@ -2,9 +2,9 @@
 #define BIBLIOTECA_H
 #include <iostream>
 #include "Exemplar.h"
-#include "Emprestimo.h"
 #include "Cliente.h"
 #include "Livro.h"
+#include "Emprestimo.h"
 using namespace std;
 
 
@@ -15,10 +15,10 @@ class Biblioteca
 		int cadastrar_cliente();
 		int realizar_emprestimo();
 		int realizar_devolucao();
-		int cadastrar_livros();
-		Livros consultar_livros(string);
-		Livros consultar_livros(int);
-		Cliente consultar_clientes(double);
+		int cadastrar_livro();
+		Livro consultar_livro(string);
+		Livro consultar_livro(int);
+		Cliente consultar_cliente(double);
 		int cadastrar_exemplar(int);
 		int remover_livro(int);
 		int remover_exemplar(int);

@@ -10,6 +10,7 @@ using namespace std;
 class Exemplar
 {
 	public:
+		Exemplar();
 		Exemplar(int);
 		void setDisp(bool);
 		void setAtivo(bool);

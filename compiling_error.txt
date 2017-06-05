@@ -1,66 +1,14 @@
 In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Cliente.h:7:0,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:6,
+                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:5,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:5,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.h:45:3: error: 'Exemplar' does not name a type
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.h:49:3: error: 'Exemplar' does not name a type
    Exemplar exemplares[100];
    ^
 In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:5:0,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4,
                  from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:19:3: error: 'Livros' does not name a type
-   Livros consultar_livros(string);
-   ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:20:3: error: 'Livros' does not name a type
-   Livros consultar_livros(int);
-   ^
 C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.h:38:3: error: 'Emprestimo' does not name a type
    Emprestimo emprestimos[100];
-   ^
-In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4:0,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:27:26: error: 'int Emprestimo::getDataEmprestimo [3]' conflicts with a previous declaration
-   int getDataEmprestimo[3];
-                          ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:17:8: note: previous declaration 'int* Emprestimo::getDataEmprestimo()'
-   int* getDataEmprestimo(void);
-        ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:10:12: error: no matching function for call to 'Emprestimo::Emprestimo()'
- Emprestimo emprestimo;
-            ^
-In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Exemplar.h:4:0,
-                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:2:
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:13:3: note: candidate: Emprestimo::Emprestimo(double, int, int, int, int, int)
-   Emprestimo(double, int, int, int, int, int);
-   ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:13:3: note:   candidate expects 6 arguments, 0 provided
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:10:7: note: candidate: Emprestimo::Emprestimo(const Emprestimo&)
- class Emprestimo
-       ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Emprestimo.h:10:7: note:   candidate expects 1 argument, 0 provided
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:11:1: error: 'biblioteca' does not name a type
- biblioteca.cadastrar_cliente(cliente);
- ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp: In function 'int main()':
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:48:16: error: 'class Biblioteca' has no member named 'cadastrar_livro'
-     biblioteca.cadastrar_livro();
-                ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:53:5: error: expected initializer before 'int'
-     int nome_livro;
-     ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:56:14: error: 'aux_l' was not declared in this scope
-       cin >> aux_l;
-              ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:60:18: error: 'class Biblioteca' has no member named 'consulta_livro'
-       biblioteca.consulta_livro(id);
-                  ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:65:20: error: 'class Biblioteca' has no member named 'consulta_livro'
-         biblioteca.consulta_livro(nome_livro);
-                    ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:72:16: error: 'class Biblioteca' has no member named 'cosulta_cliente'
-     biblioteca.cosulta_cliente(cpf_cliente);
-                ^
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:89:3: error: expected ';' before 'case'
-   case 10 :
    ^

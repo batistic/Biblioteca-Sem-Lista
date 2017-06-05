@@ -6,6 +6,10 @@
 #include "Livro.h"
 using namespace std;
 
+Exemplar::Exemplar(){
+
+}
+
 Exemplar::Exemplar(int id){
 	id_ex = id;
 	disp = true;
@@ -31,4 +35,3 @@ bool Exemplar::getAtivo(){
 int Exemplar::getID(){
 	return this.id_ex;
 }
-

@@ -5,12 +5,12 @@
 #include "Emprestimo.h"
 #include "Biblioteca.h"
 #include "Cliente.h"
-#include "Livro.h"
 using namespace std;
 
 class Livro
 {
 	public:
+		Livro();
 		Livro(int);
 		void editar_dados();
 		void mostrar_dados();
@@ -42,11 +42,11 @@ class Livro
 		int edicao;
 		int num_paginas;
 		int ano;
-		Exemplar exemplares[100];
 		int nExemplares;
 		bool lista_reserva;
 		bool ativo;
 		int emprestimos;
+		Exemplar exemplares[100];
 };
 
 #endif

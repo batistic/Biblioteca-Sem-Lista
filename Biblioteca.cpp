@@ -13,7 +13,7 @@ Biblioteca::Biblioteca(){
 }
 
 int Biblioteca::cadastrar_cliente(){
-	clientes[nClientes] = new Cliente();
+	clientes[nClientes] = new Cliente(nClientes);
 	nClientes++;
 }
 
@@ -67,12 +67,12 @@ int Biblioteca::realizar_devolucao(){
 	}
 }
 
-int Biblioteca::cadastrar_livros(){
+int Biblioteca::cadastrar_livro(){
 	livros[nLivros] = new Livro(nLivros);
 	nLivros++;
 }
 
-Livros Biblioteca::consutar_livros(string nome){
+Livro Biblioteca::consutar_livro(string nome){
 	int i;
 	for(i=0;i<nLivros;i++){
 		if(nome == livros[i].getTitulo()){
@@ -81,11 +81,11 @@ Livros Biblioteca::consutar_livros(string nome){
 	}
 }
 
-Livros Biblioteca::consultar_livros(int n){
+Livro Biblioteca::consultar_livro(int n){
 	return livros[n];
 }
 
-Cliente Biblioteca::consultar_clientes(double n){
+Cliente Biblioteca::consultar_cliente(double n){
 	int i;
 	for(i=0;i<nClientes;i++){
 		if(clientes[i].get_CPF() == n){
@@ -143,8 +143,8 @@ int Biblioteca::relatorio_livros(){
 	cout << "Quantidade de exemplares: " << ex << endl;
 	cout << "Exemplares em emprestimo: " << (ex-disp) << endl;
 	cout << "Livro mais emprestado: " << livros[popular].getTitulo() << " (" << maior << ")" << endl ;
-	
-	
+
+
 }
 
 int Biblioteca::relatorio_cliente(double n){
@@ -167,4 +167,3 @@ int Biblioteca::relatorio_cliente(double n){
 int Biblioteca::relatorio_clientes(){
 	cout << "Numero de clientes cadastrados: " << nClientes << endl;
 }
-
