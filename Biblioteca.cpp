@@ -118,7 +118,7 @@ int Biblioteca::remover_exemplar(int n){
 
 int Biblioteca::remover_cliente(double n){
 	consultar_cliente(n).setAtivo(false);
-	nCLientes--;
+	nClientes--;
 }
 
 int Biblioteca::editar_cliente(double n){
