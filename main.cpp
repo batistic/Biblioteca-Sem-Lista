@@ -1,16 +1,20 @@
 #include <iostream>
+#include <string>
 #include <stdlib.h>
-#include "Biblioteca.h"
+#include "Biblioteca.cpp"
 using namespace std;
 
 int main(){
     Biblioteca biblio;
     int aux;
+      int aux_l;
+      int aux_g;
+
     int id;
     double cpf_cliente;
     string nome_livro;
     do{
-        system("cls");
+        //system("cls");
         cout<<"Sistema de Biblioteca"<<endl<<endl;
         cout<<"1. Emprestimo"<<endl;
         cout<<"2. Devolucao"<<endl;
@@ -32,24 +36,24 @@ int main(){
         switch (aux){
            case 1 :
             biblio.realizar_emprestimo();
-            system("pause");
+            //system("pause");
             break;
           case 2 :
             biblio.realizar_devolucao();
-            system("pause");
+            //system("pause");
             break;
           case 3 :
             biblio.cadastrar_cliente();
-            system("pause");
+            //system("pause");
             break;
           case 4 :
             biblio.cadastrar_livro();
-            system("pause");
+            //system("pause");
             break;
           case 5 :
-            int aux_l;
 
-            int nome_livro;
+
+            //int nome_livro;
               cout<<"1. Por ID"<<endl;
               cout<<"2. Por Nome"<<endl;
               cin >> aux_l;
@@ -63,52 +67,51 @@ int main(){
                 std::cin >> nome_livro;
                 biblio.consultar_livro(nome_livro).mostrar_dados();
             }
-            system("pause");
+            //system("pause");
             break;
           case 6 :
             std::cout << "Digite o CPF do cliente: ";
             std::cin >> cpf_cliente;
             biblio.consultar_cliente(cpf_cliente);
-            system("pause");
+            //system("pause");
             break;
           case 7 :
             std::cout << "Digite o ID do livro: ";
             std::cin >> id;
             biblio.cadastrar_exemplar(id);
-            system("pause");
+            //system("pause");
             break;
           case 8 :
             std::cout << "Digite o CPF do cliente: ";
             std::cin >> cpf_cliente;
             biblio.editar_cliente(cpf_cliente);
-            system("pause");
+            //system("pause");
             break;
           case 9 :
             std::cout << "Digite o ID do livro: ";
             std::cin >> id;
             biblio.editar_livro(id);
-            system("pause");
+            //system("pause");
             break;
           case 10 :
             std::cout << "Digite o ID do livro: ";
             std::cin >> id;
             biblio.remover_livro(id);
-            system("pause");
+            //system("pause");
             break;
           case 11 :
             std::cout << "Digite o CPF do cliente: ";
             std::cin >> cpf_cliente;
             biblio.remover_cliente(cpf_cliente);
-            system("pause");
+            //system("pause");
             break;
           case 12 :
             std::cout << "Digite o ID do livro: ";
             std::cin >> id;
             biblio.remover_exemplar(id);
-            system("pause");
+            //system("pause");
             break;
         	case 13 :
-        		int aux_g;
         		std::cout << "1. Gerar relatorio de livro" << '\n';
         		std::cout << "2. Gerar relatorio de livros" << '\n';
         		std::cout << "3. Gerar relatorio de cliente" << '\n';
@@ -117,7 +120,7 @@ int main(){
         		std::cin >> aux_g;
         		switch (aux_g) {
         			case 1:
-        			int nome_livro;
+        			//int nome_livro;
         				cout<<"1. Por ID"<<endl;
         				cout<<"2. Por Nome"<<endl;
         				cin >> aux_l;
@@ -145,7 +148,7 @@ int main(){
         				break;
 
         		}
-                system("pause");
+                //system("pause");
                 break;
           case 0 :
             break;

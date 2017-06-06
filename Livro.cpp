@@ -120,6 +120,7 @@ int Livro::disponivel(){
 	for(i=0;i<nExemplares;i++){
 		if(exemplares[i].getDisp() == true)
 			n++;
+	}
 	return n;
 }
 

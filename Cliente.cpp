@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include "Cliente.h"
 using namespace std;
 
@@ -10,7 +11,7 @@ void Cliente::setCliente(){
   std::cin >> CPF;
   std::cout << "Nome: ";
   std::cin >> nome;
-  std::cout << "Sexo: ";
+  std::cout << "Sexo (H ou M): ";
   std::cin >> sexo;
   std::cout << "Dia de nascimento: ";
   std::cin >> data_nasc[0];
@@ -26,7 +27,7 @@ void Cliente::setCliente(){
   std::cin >> telefone;
   std::cout << "Email: ";
   std::cin >> email;
-  modalidade = 4;
+  int modalidade = 4;
   while(modalidade < 1 || modalidade >3){
   std::cout << "Modalidade: "<<'\n'<< "1. Professor" << '\n' << "2. TA" << '\n' << "3. Aluno";
   std::cin >> modalidade;
@@ -67,6 +68,7 @@ void Cliente::mostrar_dados(){
 
 int Cliente::editar_cadastro(){
   int resposta = 9;
+  string n;
   std::cout << "1. CPF: " << CPF << '\n';
   std::cout << "2. Nome: " << nome << '\n';
   std::cout << "3. Sexo: " << sexo << '\n';
@@ -75,7 +77,7 @@ int Cliente::editar_cadastro(){
   std::cout << "6. Endereco: " << endereco << '\n';
   std::cout << "7. Telefone: " << telefone << '\n';
   std::cout << "8. Email: " << email << '\n';
-  std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair";
+  std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair"<<endl;
   std::cin >> resposta;
   while(resposta != 0){
   if(resposta == 1){
@@ -84,7 +86,9 @@ int Cliente::editar_cadastro(){
   }
   else if (resposta == 2){
     std::cout << "Insira o novo nome: ";
-    std::cin >> nome;
+    std::cin >> n;
+    setNome(n);
+    setbuf(stdin,NULL);
   }
   else if (resposta == 3){
     std::cout << "Insira o novo sexo: ";
@@ -125,8 +129,10 @@ int Cliente::editar_cadastro(){
 	std::cout << "6. Endereco: " << endereco << '\n';
 	std::cout << "7. Telefone: " << telefone << '\n';
 	std::cout << "8. Email: " << email << '\n';
-    std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair";
   }
+  setbuf(stdin,NULL);
+    std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair"<<endl;
+    std::cin >> resposta;
   }
   return 0;
 }
@@ -148,4 +154,8 @@ double Cliente::get_CPF(){
 }
 string Cliente::get_Nome(){
   return nome;
+}
+
+void Cliente::setNome(string n){
+  nome = n;
 }

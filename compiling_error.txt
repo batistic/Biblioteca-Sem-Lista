@@ -1,22 +1,58 @@
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x29): undefined reference to `Biblioteca::Biblioteca()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x2de): undefined reference to `Biblioteca::realizar_emprestimo()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x2fc): undefined reference to `Biblioteca::realizar_devolucao()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x31a): undefined reference to `Biblioteca::cadastrar_cliente()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x338): undefined reference to `Biblioteca::cadastrar_livro()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x3fe): undefined reference to `Biblioteca::consultar_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x40e): undefined reference to `Livro::mostrar_dados()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x472): undefined reference to `Biblioteca::consultar_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x482): undefined reference to `Livro::mostrar_dados()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x4ea): undefined reference to `Biblioteca::consultar_cliente(double)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x54b): undefined reference to `Biblioteca::cadastrar_exemplar(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x59f): undefined reference to `Biblioteca::editar_cliente(double)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x5f3): undefined reference to `Biblioteca::editar_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x647): undefined reference to `Biblioteca::remover_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x69b): undefined reference to `Biblioteca::remover_cliente(double)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x6ef): undefined reference to `Biblioteca::remover_exemplar(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x89d): undefined reference to `Biblioteca::relatorio_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x8f4): undefined reference to `Biblioteca::relatorio_livro(int)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x906): undefined reference to `Biblioteca::relatorio_livros()'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x948): undefined reference to `Biblioteca::relatorio_cliente(double)'
-C:\Users\Gustavo\AppData\Local\Temp\ccMZFuRR.o:main.cpp:(.text+0x95a): undefined reference to `Biblioteca::relatorio_clientes()'
-collect2.exe: error: ld returned 1 exit status
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp: In function 'int main()':
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:63:32: error: cannot convert 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' to 'char*' for argument '1' to 'char* gets(char*)'
+                 gets(nome_livro);
+                                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:68:16: error: jump to case label [-fpermissive]
+           case 6 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:74:16: error: jump to case label [-fpermissive]
+           case 7 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:80:16: error: jump to case label [-fpermissive]
+           case 8 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:86:16: error: jump to case label [-fpermissive]
+           case 9 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:92:16: error: jump to case label [-fpermissive]
+           case 10 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:98:16: error: jump to case label [-fpermissive]
+           case 11 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:104:16: error: jump to case label [-fpermissive]
+           case 12 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:110:15: error: jump to case label [-fpermissive]
+          case 13 :
+               ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:150:16: error: jump to case label [-fpermissive]
+           case 0 :
+                ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:52:20: note:   crosses initialization of 'std::__cxx11::string nome_livro'
+             string nome_livro;
+                    ^

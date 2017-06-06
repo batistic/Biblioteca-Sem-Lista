@@ -15,13 +15,14 @@ class Cliente{
 		void setAtivo(bool);
 		double get_CPF();
 		string get_Nome();
+		void setNome(string);
 	protected:
 		double CPF;
 		string nome;
 		char sexo; // [H] ou [M]
 		int data_nasc[3]; // {dd,mm,aaaa}
 		string endereco;
-		int CEP;
+		double CEP;
 		int telefone;
 		string email;
 		int emprestimos;

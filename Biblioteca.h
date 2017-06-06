@@ -1,7 +1,6 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 #pragma once
-#include <iostream>
 #include "Cliente.h"
 #include "Livro.h"
 #include "Emprestimo.h"
@@ -28,7 +27,7 @@ class Biblioteca{
 		int relatorio_livros();
 		int relatorio_cliente(double);
 		int relatorio_clientes();
-	protected:
+	private:
 		Cliente clientes[100];
 		int nClientes;
 		Livro livros[100];

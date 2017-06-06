@@ -1,5 +1,11 @@
 #include <iostream>
 #include "Biblioteca.h"
+
+#include "Cliente.cpp"
+#include "Livro.cpp"
+#include "Emprestimo.cpp"
+#include "Exemplar.cpp"
+
 using namespace std;
 
 Biblioteca::Biblioteca(){
@@ -163,4 +169,3 @@ int Biblioteca::relatorio_cliente(double n){
 int Biblioteca::relatorio_clientes(){
 	cout << "Numero de clientes cadastrados: " << nClientes << endl;
 }
-
