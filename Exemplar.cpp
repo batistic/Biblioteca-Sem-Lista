@@ -1,37 +1,33 @@
 #include <iostream>
 #include "Exemplar.h"
-#include "Emprestimo.h"
-//#include "Biblioteca.h"
-#include "Cliente.h"
-//#include "Livro.h"
 using namespace std;
 
 Exemplar::Exemplar(){
 
 }
 
-Exemplar::Exemplar(int id){
+void Exemplar::setExemplar(int id){
 	id_ex = id;
 	disp = true;
 	ativo = true;
 }
 
 void Exemplar::setDisp(bool dis){
-	this.disp = dis;
+	disp = dis;
 }
 
 void Exemplar::setAtivo(bool at){
-	this.ativo = at;
+	ativo = at;
 }
 
 bool Exemplar::getDisp(){
-	return this.disp;
+	return disp;
 }
 
 bool Exemplar::getAtivo(){
-	return this.ativo;
+	return ativo;
 }
 
 int Exemplar::getID(){
-	return this.id_ex;
+	return id_ex;
 }

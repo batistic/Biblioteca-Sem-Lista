@@ -2,17 +2,12 @@
 #define EXEMPLAR_H
 #pragma once
 #include <iostream>
-#include "Emprestimo.h"
-//#include "Biblioteca.h"
-#include "Cliente.h"
-//#include "Livro.h"
 using namespace std;
 
-class Exemplar
-{
+class Exemplar{
 	public:
 		Exemplar();
-		Exemplar(int);
+		void setExemplar(int);
 		void setDisp(bool);
 		void setAtivo(bool);
 		bool getDisp();

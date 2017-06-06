@@ -3,20 +3,16 @@
 #pragma once
 #include <iostream>
 #include "Exemplar.h"
-#include "Emprestimo.h"
-//#include "Biblioteca.h"
-#include "Cliente.h"
 using namespace std;
 
-class Livro
-{
+class Livro{
 	public:
 		Livro();
-		Livro(int);
+		void setLivro(int);
 		void editar_dados();
 		void mostrar_dados();
 		void setQtd_exemplares(int);
-		int cadastrar_exemplares(int);
+		int cadastrar_exemplares();
 		int adicionar_exemplar();
 		int remover_exemplar(int);
 		int exemplar_disp();

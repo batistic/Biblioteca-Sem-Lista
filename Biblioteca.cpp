@@ -1,9 +1,5 @@
 #include <iostream>
-#include "Exemplar.h"
-#include "Emprestimo.h"
 #include "Biblioteca.h"
-#include "Cliente.h"
-#include "Livro.h"
 using namespace std;
 
 Biblioteca::Biblioteca(){
@@ -13,7 +9,7 @@ Biblioteca::Biblioteca(){
 }
 
 int Biblioteca::cadastrar_cliente(){
-	clientes[nClientes] = new Cliente(nClientes);
+	clientes[nClientes].setCliente();
 	nClientes++;
 }
 
@@ -37,9 +33,9 @@ int Biblioteca::realizar_emprestimo(){
 	cout << "ID do livro: ";
 	cin >> id_livro;
 	if(livros[id_livro].disponivel() > 0){
-		emprestimos[nEmprestimos] = new Emprestimo(cpf_cliente,id_livro,livros[id_livro].exemplar_disp(),d1,d2,nEmprestimos);
+		emprestimos[nEmprestimos].setEmprestimo(cpf_cliente,id_livro,livros[id_livro].exemplar_disp(),d1,d2,nEmprestimos);
 		nEmprestimos++;
-		this.consultar_clientes(cpf_cliente).adicionarEmprestimo();
+		consultar_cliente(cpf_cliente).adicionarEmprestimo();
 	}
 	else{
 		cout << "Nenhum exemplar disponivel! Tente outro dia." << endl;
@@ -61,18 +57,18 @@ int Biblioteca::realizar_devolucao(){
 	int i;
 	for(i=0;i<nEmprestimos;i++){
 		if(emprestimos[i].getLivro() == id_livro && emprestimos[i].getExemplar() == id_exemplar){
-			emprestimos[i].entregar();
+			emprestimos[i].entregar(d);
 			break;
 		}
 	}
 }
 
 int Biblioteca::cadastrar_livro(){
-	livros[nLivros] = new Livro(nLivros);
+	livros[nLivros].setLivro(nLivros);
 	nLivros++;
 }
 
-Livro Biblioteca::consutar_livro(string nome){
+Livro Biblioteca::consultar_livro(string nome){
 	int i;
 	for(i=0;i<nLivros;i++){
 		if(nome == livros[i].getTitulo()){
@@ -110,11 +106,11 @@ int Biblioteca::remover_exemplar(int n){
 }
 
 int Biblioteca::remover_cliente(double n){
-	this.consultar_clientes(n).setAtivo(false);
+	consultar_cliente(n).setAtivo(false);
 }
 
 int Biblioteca::editar_cliente(double n){
-	this.consultar_clientes(n).editar_cadastro();
+	consultar_cliente(n).editar_cadastro();
 }
 
 int Biblioteca::editar_livro(int n){
@@ -126,7 +122,7 @@ int Biblioteca::relatorio_livro(int n){
 }
 
 int Biblioteca::relatorio_livro(string nome){
-	this.consutar_livros(nome).mostrar_dados();
+	consultar_livro(nome).mostrar_dados();
 }
 
 int Biblioteca::relatorio_livros(){
@@ -148,11 +144,11 @@ int Biblioteca::relatorio_livros(){
 }
 
 int Biblioteca::relatorio_cliente(double n){
-	Cliente aux = this.consultar_clientes(n);
+	Cliente aux = consultar_cliente(n);
 	aux.mostrar_dados();
 	int i;
 	for(i=0;i<nEmprestimos;i++){
-		if(emprestimos[i].getCliente == n){
+		if(emprestimos[i].getCliente() == n){
 			cout << "Livro: " << livros[emprestimos[i].getLivro()].getTitulo() << endl;
 			cout << "Data do emprestimo: "  << emprestimos[i].getDataEmprestimo()[0] << "/" << emprestimos[i].getDataEmprestimo()[1] << "/" << emprestimos[i].getDataEmprestimo()[2] << endl;
 			if(emprestimos[i].verificarEntrega() == true)
@@ -167,3 +163,4 @@ int Biblioteca::relatorio_cliente(double n){
 int Biblioteca::relatorio_clientes(){
 	cout << "Numero de clientes cadastrados: " << nClientes << endl;
 }
+

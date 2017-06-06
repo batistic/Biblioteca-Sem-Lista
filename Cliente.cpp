@@ -1,152 +1,151 @@
 #include <iostream>
-#include "Exemplar.h"
-#include "Emprestimo.h"
-//#include "Biblioteca.h"
 #include "Cliente.h"
-#include "Livro.h"
 using namespace std;
 
 Cliente::Cliente(){
-  std::cout << "CPF: ";
-  std::cin >> this.CPF;
-  std::cout << "Nome: ";
-  std::cin >> this.nome;
-  std::cout << "Sexo: ";
-  std::cin >> this.sexo;
-  std::cout << "Dia de nascimento: ";
-  std::cin >> this.data_nasc[0];
-  std::cout << "Mes de nascimento: ";
-  std::cin >> this.data_nasc[1];
-  std::cout << "Ano de nascimento: ";
-  std::cin >> this.data_nasc[2];
-  std::cout << "CEP: ";
-  std::cin >> this.CEP;
-  std::cout << "Endereco: ";
-  std::cin >> this.endereco;
-  std::cout << "Telefone: ";
-  std::cin >> this.telefone;
-  std::cout << "Email: ";
-  std::cin >> this.email;
-  this.modalidade = 4;
-  while(this.modalidade < 1 || this.modalidade >3){
-  std::cout << "Modalidade: "<<'\n'<< "1. Professor" << '\n' << "2. TA" << '\n' << "3. Aluno";
-  std::cin >> this.modalidade;
+}
 
-    if(this.modalidade == 1){
-    this.limite_emp = 5;
-    this.prazo_padrao = 14;
+void Cliente::setCliente(){
+  std::cout << "CPF: ";
+  std::cin >> CPF;
+  std::cout << "Nome: ";
+  std::cin >> nome;
+  std::cout << "Sexo: ";
+  std::cin >> sexo;
+  std::cout << "Dia de nascimento: ";
+  std::cin >> data_nasc[0];
+  std::cout << "Mes de nascimento: ";
+  std::cin >> data_nasc[1];
+  std::cout << "Ano de nascimento: ";
+  std::cin >> data_nasc[2];
+  std::cout << "CEP: ";
+  std::cin >> CEP;
+  std::cout << "Endereco: ";
+  std::cin >> endereco;
+  std::cout << "Telefone: ";
+  std::cin >> telefone;
+  std::cout << "Email: ";
+  std::cin >> email;
+  modalidade = 4;
+  while(modalidade < 1 || modalidade >3){
+  std::cout << "Modalidade: "<<'\n'<< "1. Professor" << '\n' << "2. TA" << '\n' << "3. Aluno";
+  std::cin >> modalidade;
+
+    if(modalidade == 1){
+    limite_emp = 5;
+    prazo_padrao = 14;
   }
-  else if(this.modalidade == 2){
-    this.limite_emp = 4;
-    this.prazo_padrao = 14;
+  else if(modalidade == 2){
+    limite_emp = 4;
+    prazo_padrao = 14;
   }
-  else if(this.modalidade == 3){
-    this.limite_emp = 3;
-    this.prazo_padrao = 7;
+  else if(modalidade == 3){
+    limite_emp = 3;
+    prazo_padrao = 7;
   }
 
   else{
     std::cout << "Resposta invalida. Insira novamente o numero referente a modalidade." << '\n';
     }
   }
-  this.pendencia = 0;
-  this.multa = 0;
-  this.ativo = true;
+  pendencia = 0;
+  multa = 0;
+  ativo = true;
 }
 
 void Cliente::mostrar_dados(){
-  std::cout << "CPF: " << this.CPF << '\n';
-  std::cout << "Nome: " << this.nome << '\n';
-  std::cout << "Sexo: " << this.sexo << '\n';
-  std::cout << "4. Data de nascimento: " << this.data_nasc[0] << "/" << this.data_nasc[1] << "/" << this.data_nasc[2] << '\n';
-  std::cout << "CEP: " << this.CEP << '\n';
-  std::cout << "Endereco: " << this.endereco << '\n';
-  std::cout << "Telefone: " << this.telefone << '\n';
-  std::cout << "Email: " << this.email << '\n';
-  std::cout << "Emprestimos: " << this.emprestimos << '\n';
+  std::cout << "CPF: " << CPF << '\n';
+  std::cout << "Nome: " << nome << '\n';
+  std::cout << "Sexo: " << sexo << '\n';
+  std::cout << "4. Data de nascimento: " << data_nasc[0] << "/" << data_nasc[1] << "/" << data_nasc[2] << '\n';
+  std::cout << "CEP: " << CEP << '\n';
+  std::cout << "Endereco: " << endereco << '\n';
+  std::cout << "Telefone: " << telefone << '\n';
+  std::cout << "Email: " << email << '\n';
+  std::cout << "Emprestimos: " << emprestimos << '\n';
 }
 
 int Cliente::editar_cadastro(){
   int resposta = 9;
-  std::cout << "1. CPF: " << this.CPF << '\n';
-  std::cout << "2. Nome: " << this.nome << '\n';
-  std::cout << "3. Sexo: " << this.sexo << '\n';
-  std::cout << "4. Data de nascimento: " << this.data_nasc[0] << "/" << this.data_nasc[1] << "/" << this.data_nasc[2] << '\n';
-  std::cout << "5. CEP: " << this.CEP << '\n';
-  std::cout << "6. Endereco: " << this.endereco << '\n';
-  std::cout << "7. Telefone: " << this.telefone << '\n';
-  std::cout << "8. Email: " << this.email << '\n';
-  std::cout << "Insira o numero referente a informacao que deseja editar ou "0" Sair";
+  std::cout << "1. CPF: " << CPF << '\n';
+  std::cout << "2. Nome: " << nome << '\n';
+  std::cout << "3. Sexo: " << sexo << '\n';
+  std::cout << "4. Data de nascimento: " << data_nasc[0] << "/" << data_nasc[1] << "/" << data_nasc[2] << '\n';
+  std::cout << "5. CEP: " << CEP << '\n';
+  std::cout << "6. Endereco: " << endereco << '\n';
+  std::cout << "7. Telefone: " << telefone << '\n';
+  std::cout << "8. Email: " << email << '\n';
+  std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair";
   std::cin >> resposta;
   while(resposta != 0){
   if(resposta == 1){
     std::cout << "Insira o novo CPF: ";
-    std::cin >> this.CPF;
+    std::cin >> CPF;
   }
   else if (resposta == 2){
     std::cout << "Insira o novo nome: ";
-    std::cin >> this.nome;
+    std::cin >> nome;
   }
   else if (resposta == 3){
     std::cout << "Insira o novo sexo: ";
-    std::cin >> this.sexo;
+    std::cin >> sexo;
   }
   else if (resposta == 4){
     std::cout << "Insira o novo dia da data de nascimento: ";
-    std::cin >> this.data_nasc[0];
+    std::cin >> data_nasc[0];
     std::cout << "Insira o novo mes da data de nascimento: ";
-    std::cin >> this.data_nasc[1];
+    std::cin >> data_nasc[1];
     std::cout << "Insira o novo ano da data de nascimento: ";
-    std::cin >> this.data_nasc[2];
+    std::cin >> data_nasc[2];
   }
   else if (resposta == 5){
     std::cout << "Insira o novo CEP: ";
-    std::cin >> this.CEP;
+    std::cin >> CEP;
   }
   else if (resposta == 6){
     std::cout << "Insira o novo endereco: ";
-    std::cin >> this.endereco;
+    std::cin >> endereco;
   }
   else if (resposta == 7){
     std::cout << "Insira o novo telefone: ";
-    std::cin >> this.telefone;
+    std::cin >> telefone;
   }
   else if (resposta == 8){
     std::cout << "Insira o novo email: ";
-    std::cin >> this.email;
+    std::cin >> email;
   }
   else{
     //system("cls");
     std::cout << "Opcao invalida. Insira novamente o numero referente a informacao que deseja editar." << '\n';
-    std::cout << "1. CPF: " << this.CPF << '\n';
-  	std::cout << "2. Nome: " << this.nome << '\n';
-	std::cout << "3. Sexo: " << this.sexo << '\n';
-	std::cout << "4. Data de nascimento: " << this.data_nasc[3] << '\n';
-	std::cout << "5. CEP: " << this.CEP << '\n';
-	std::cout << "6. Endereco: " << this.endereco << '\n';
-	std::cout << "7. Telefone: " << this.telefone << '\n';
-	std::cout << "8. Email: " << this.email << '\n';
-    std::cout << "Insira o numero referente a informacao que deseja editar ou "0" Sair";
+    std::cout << "1. CPF: " << CPF << '\n';
+  	std::cout << "2. Nome: " << nome << '\n';
+	std::cout << "3. Sexo: " << sexo << '\n';
+	std::cout << "4. Data de nascimento: " << data_nasc[3] << '\n';
+	std::cout << "5. CEP: " << CEP << '\n';
+	std::cout << "6. Endereco: " << endereco << '\n';
+	std::cout << "7. Telefone: " << telefone << '\n';
+	std::cout << "8. Email: " << email << '\n';
+    std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair";
   }
   }
   return 0;
 }
 
 void Cliente::adicionarEmprestimo(){
-	this.emprestimos++;
+	emprestimos++;
 }
 
 bool Cliente::getAtivo(){
-  return this.ativo;
+  return ativo;
 }
 
 void Cliente::setAtivo(bool at){
-  this.ativo = at;
+  ativo = at;
 }
 
 double Cliente::get_CPF(){
-  return this.CPF;
+  return CPF;
 }
 string Cliente::get_Nome(){
-  return this.nome;
+  return nome;
 }

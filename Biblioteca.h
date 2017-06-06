@@ -2,15 +2,12 @@
 #define BIBLIOTECA_H
 #pragma once
 #include <iostream>
-#include "Exemplar.h"
 #include "Cliente.h"
 #include "Livro.h"
 #include "Emprestimo.h"
 using namespace std;
 
-
-class Biblioteca
-{
+class Biblioteca{
 	public:
 		Biblioteca();
 		int cadastrar_cliente();
@@ -38,7 +35,6 @@ class Biblioteca
 		int nLivros;
 		Emprestimo emprestimos[100];
 		int nEmprestimos;
-
 };
 
 #endif

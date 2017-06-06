@@ -1,61 +1,15 @@
 #include <iostream>
-//#include "Exemplar.h"
-#include "Emprestimo.h"
-//#include "Biblioteca.h"
-#include "Cliente.h"
 #include "Livro.h"
 using namespace std;
 
-class Livro
-{
-	public:
-		Livro();
-		Livro(int);
-		void editar_dados();
-		void mostrar_dados();
-		void setQtd_exemplares(int);
-		int cadastrar_exemplares(int);
-		int adicionar_exemplar();
-		int remover_exemplar(int);
-		int exemplar_disp();
-		int disponivel();
-		void setAtivo(bool);
-		bool getAtivo();
-		int getID();
-		string getTitulo();
-		string getAutor();
-		string getGenero();
-		string getEditora();
-		int getEdicao();
-		int getNum_paginas();
-		int getAno();
-		int getQtd_exemplares();
-		bool getLista_reserva();
-		int getEmprestimos();
-	protected:
-		int id_livro;
-		string titulo;
-		string autor;
-		string genero;
-		string editora;
-		int edicao;
-		int num_paginas;
-		int ano;
-		Exemplar exemplares[100];
-		int nExemplares;
-		bool lista_reserva;
-		bool ativo;
-		int emprestimos;
-};
-
-Livro::livro(){
+Livro::Livro(){
 
 }
 
-Livro::Livro(int n){
+void Livro::setLivro(int n){
 	cout << "Titulo: ";
 	cin >> titulo;
-	cout >> "Autor: ";
+	cout << "Autor: ";
 	cin >> autor;
 	cout << "Genero: ";
 	cin >> genero;
@@ -71,9 +25,9 @@ Livro::Livro(int n){
 	cin >> nExemplares;
 
 	id_livro = n;
-	cout << "ID: " << id_livro;
+	cout << "ID: " << id_livro << endl;
 
-	cadastrar_exemplares(nExemplares);
+	cadastrar_exemplares();
 
 	lista_reserva = false;
 	ativo = true;
@@ -91,7 +45,7 @@ void Livro::editar_dados(){
 	cout << "6. Ano: " << ano << endl;
 	cout << "7. Numero de paginas: " << num_paginas << endl;
 	while(opc != 0){
-		cout << "Insira o numero referente a informacao que deseja editar ou "0" Sair"<<endl<<": ";
+		cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair"<<endl<<": ";
   		cin >> opc;
   		switch(opc){
   			case 1: cout << "Titulo: ";
@@ -137,16 +91,16 @@ void Livro::setQtd_exemplares(int n){
 	nExemplares = n;
 }
 
-int Livro::cadastrar_exemplares(int n){
+int Livro::cadastrar_exemplares(){
 	int i;
-	for(i=nExemplares;i<nExemplares+n;i++){
-		exemplares[i] = new Exemplares(i);
+	for(i=0;i<nExemplares;i++){
+		exemplares[i].setExemplar(i);
 	}
-	nExemplares += n;
+	return 0;
 }
 
 int Livro::adicionar_exemplar(){
-	exemplares[nExemplares] = new Exemplar(nExemplares);
+	exemplares[nExemplares].setExemplar(nExemplares);
 	nExemplares++;
 }
 
@@ -157,67 +111,66 @@ int Livro::remover_exemplar(int n){
 int Livro::exemplar_disp(){
 	int i;
 	for(i=0;i<nExemplares;i++)
-		if(exemplares[i].getDisp == true)
+		if(exemplares[i].getDisp() == true)
 			return i;
 }
 
 int Livro::disponivel(){
 	int i,n=0;
 	for(i=0;i<nExemplares;i++){
-		if(exemplares[i].getDisp == true)
+		if(exemplares[i].getDisp() == true)
 			n++;
-	}
 	return n;
 }
 
-void setAtivo(bool at){
-	this.ativo = at;
+void Livro::setAtivo(bool at){
+	ativo = at;
 }
 
-bool getAtivo(){
-	return this.ativo;
+bool Livro::getAtivo(){
+	return ativo;
 }
 
 int Livro::getID(){
-	return this.id_livro;
+	return id_livro;
 }
 
 string Livro::getTitulo(){
-	return this.titulo;
+	return titulo;
 }
 
 string Livro::getAutor(){
-	return this.autor;
+	return autor;
 }
 
 string Livro::getGenero(){
-	return this.genero;
+	return genero;
 }
 
 string Livro::getEditora(){
-	return this.editora;
+	return editora;
 }
 
 int Livro::getEdicao(){
-	return this.edicao;
+	return edicao;
 }
 
 int Livro::getNum_paginas(){
-	return this.num_paginas;
+	return num_paginas;
 }
 
 int Livro::getAno(){
-	return this.ano;
+	return ano;
 }
 
 int Livro::getQtd_exemplares(){
-	return this.nExemplares;
+	return nExemplares;
 }
 
 bool Livro::getLista_reserva(){
-	return this.lista_reserva;
+	return lista_reserva;
 }
 
 int Livro::getEmprestimos(){
-	return this.emprestimos;
+	return emprestimos;
 }
