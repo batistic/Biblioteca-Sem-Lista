@@ -77,7 +77,7 @@ int Biblioteca::cadastrar_livro(){
 Livro Biblioteca::consultar_livro(string nome){
 	int i;
 	for(i=0;i<nLivros;i++){
-		if(nome == livros[i].getTitulo()){
+		if(nome == livros[i].getTitulo() && livros[i].getAtivo() == true){
 			return livros[i];
 		}
 	}
@@ -90,7 +90,7 @@ Livro Biblioteca::consultar_livro(int n){
 Cliente Biblioteca::consultar_cliente(double n){
 	int i;
 	for(i=0;i<nClientes;i++){
-		if(clientes[i].get_CPF() == n){
+		if(clientes[i].get_CPF() == n && clientes[i].getAtivo() == true){
 			return clientes[i];
 		}
 	}
