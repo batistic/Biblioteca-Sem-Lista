@@ -102,6 +102,11 @@ int Biblioteca::cadastrar_exemplar(int n){
 
 int Biblioteca::remover_livro(int n){
 	livros[n].setAtivo(false);
+	nLivros--;
+	int i;
+	for(i=0;i<livros[n].getQtd_exemplares();i++){
+		livros[n].remover_exemplar(i);
+	}
 }
 
 int Biblioteca::remover_exemplar(int n){
@@ -113,6 +118,7 @@ int Biblioteca::remover_exemplar(int n){
 
 int Biblioteca::remover_cliente(double n){
 	consultar_cliente(n).setAtivo(false);
+	nCLientes--;
 }
 
 int Biblioteca::editar_cliente(double n){

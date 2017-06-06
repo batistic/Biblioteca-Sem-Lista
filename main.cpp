@@ -91,15 +91,15 @@ int main(){
             //system("pause");
             break;
           case 10 :
-            std::cout << "Digite o ID do livro: ";
-            std::cin >> id;
-            biblio.remover_livro(id);
-            //system("pause");
-            break;
-          case 11 :
             std::cout << "Digite o CPF do cliente: ";
             std::cin >> cpf_cliente;
             biblio.remover_cliente(cpf_cliente);
+            //system("pause");
+            break;
+          case 11 :
+            std::cout << "Digite o ID do livro: ";
+            std::cin >> id;
+            biblio.remover_livro(id);
             //system("pause");
             break;
           case 12 :

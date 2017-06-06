@@ -100,12 +100,19 @@ int Livro::cadastrar_exemplares(){
 }
 
 int Livro::adicionar_exemplar(){
+	int i;
+	for(i=0;i<nExemplares;i++){
+		if(exemplares[i].getAtivo() == false)
+			exemplares[i].setExemplar(i);
+			return 0;
+	}
 	exemplares[nExemplares].setExemplar(nExemplares);
 	nExemplares++;
 }
 
 int Livro::remover_exemplar(int n){
 	exemplares[n].setAtivo(false);
+	nExemplares--;
 }
 
 int Livro::exemplar_disp(){

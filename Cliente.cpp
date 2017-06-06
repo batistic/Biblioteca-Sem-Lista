@@ -10,7 +10,10 @@ void Cliente::setCliente(){
   std::cout << "CPF: ";
   std::cin >> CPF;
   std::cout << "Nome: ";
-  std::cin >> nome;
+  setbuf(stdin,NULL);
+  std::getline(cin,nome);
+  setbuf(stdin,NULL);
+  //std::cin >> nome;
   std::cout << "Sexo (H ou M): ";
   std::cin >> sexo;
   std::cout << "Dia de nascimento: ";
@@ -22,14 +25,20 @@ void Cliente::setCliente(){
   std::cout << "CEP: ";
   std::cin >> CEP;
   std::cout << "Endereco: ";
-  std::cin >> endereco;
+  setbuf(stdin,NULL);
+  std::getline(cin,endereco);
+  setbuf(stdin,NULL);
+  //std::cin >> endereco;
   std::cout << "Telefone: ";
   std::cin >> telefone;
   std::cout << "Email: ";
-  std::cin >> email;
+  setbuf(stdin,NULL);
+  std::getline(cin,email);
+  setbuf(stdin,NULL);
+  //std::cin >> email;
   int modalidade = 4;
   while(modalidade < 1 || modalidade >3){
-  std::cout << "Modalidade: "<<'\n'<< "1. Professor" << '\n' << "2. TA" << '\n' << "3. Aluno";
+  std::cout << "Modalidade: "<<'\n'<< "1. Professor" << '\n' << "2. TA" << '\n' << "3. Aluno"<<endl;
   std::cin >> modalidade;
 
     if(modalidade == 1){
