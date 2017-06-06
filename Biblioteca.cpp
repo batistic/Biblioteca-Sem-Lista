@@ -101,11 +101,10 @@ int Biblioteca::cadastrar_exemplar(int n){
 }
 
 int Biblioteca::remover_livro(int n){
-	livros[n].setAtivo(false);
 	nLivros--;
 	int i;
-	for(i=0;i<livros[n].getQtd_exemplares();i++){
-		livros[n].remover_exemplar(i);
+	for(i=n;i<nLivros;i++){
+		livros[i] = livros[i+1];
 	}
 }
 
@@ -117,8 +116,17 @@ int Biblioteca::remover_exemplar(int n){
 }
 
 int Biblioteca::remover_cliente(double n){
-	consultar_cliente(n).setAtivo(false);
+	int i;
+	for(i=0;i<nClientes;i++){
+		if(clientes[i].getCPF() == n){
+			id = i;
+			break;
+		}
+	}
 	nClientes--;
+	for(i=id;i<nClientes;i++){
+		clientes[i] = clientes[i+1];
+	}
 }
 
 int Biblioteca::editar_cliente(double n){
@@ -174,4 +182,5 @@ int Biblioteca::relatorio_cliente(double n){
 
 int Biblioteca::relatorio_clientes(){
 	cout << "Numero de clientes cadastrados: " << nClientes << endl;
+	int i;
 }

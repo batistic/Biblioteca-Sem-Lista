@@ -1,5 +1,5 @@
 In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:4:0:
 C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.cpp: In member function 'int Biblioteca::remover_cliente(double)':
-C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.cpp:121:2: error: 'nCLientes' was not declared in this scope
-  nCLientes--;
-  ^
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.cpp:119:32: error: 'class Cliente' has no member named 'getID'
+  int id = consultar_cliente(n).getID();
+                                ^

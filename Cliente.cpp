@@ -4,6 +4,7 @@
 using namespace std;
 
 Cliente::Cliente(){
+    ativo = false;
 }
 
 void Cliente::setCliente(){

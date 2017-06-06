@@ -111,8 +111,11 @@ int Livro::adicionar_exemplar(){
 }
 
 int Livro::remover_exemplar(int n){
-	exemplares[n].setAtivo(false);
 	nExemplares--;
+	int i;
+	for(i=n;i<nExemplares;i++){
+		exemplares[i] = exemplares[i+1];
+	}
 }
 
 int Livro::exemplar_disp(){
