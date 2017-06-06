@@ -51,9 +51,6 @@ int main(){
             //system("pause");
             break;
           case 5 :
-
-
-            //int nome_livro;
               cout<<"1. Por ID"<<endl;
               cout<<"2. Por Nome"<<endl;
               cin >> aux_l;
@@ -72,7 +69,7 @@ int main(){
           case 6 :
             std::cout << "Digite o CPF do cliente: ";
             std::cin >> cpf_cliente;
-            biblio.consultar_cliente(cpf_cliente);
+            biblio.consultar_cliente(cpf_cliente).mostrar_dados();
             //system("pause");
             break;
           case 7 :
@@ -120,7 +117,6 @@ int main(){
         		std::cin >> aux_g;
         		switch (aux_g) {
         			case 1:
-        			//int nome_livro;
         				cout<<"1. Por ID"<<endl;
         				cout<<"2. Por Nome"<<endl;
         				cin >> aux_l;
