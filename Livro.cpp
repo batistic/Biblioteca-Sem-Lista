@@ -117,7 +117,7 @@ int Livro::exemplar_disp(){
 
 int Livro::disponivel(){
 	int i,n=0;
-	for(i=0;i<nExemplares;i++)
+	for(i=0;i<nExemplares;i++){
 		if(exemplares[i].getDisp() == true)
 			n++;
 	return n;
