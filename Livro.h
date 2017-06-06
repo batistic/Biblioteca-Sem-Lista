@@ -2,7 +2,7 @@
 #define LIVRO_H
 #pragma once
 #include <iostream>
-#include "Exemplar.h"
+#include "Exemplar.cpp"
 using namespace std;
 
 class Livro{

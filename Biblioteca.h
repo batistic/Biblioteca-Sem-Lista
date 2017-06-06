@@ -2,9 +2,9 @@
 #define BIBLIOTECA_H
 #pragma once
 #include <iostream>
-#include "Cliente.h"
-#include "Livro.h"
-#include "Emprestimo.h"
+#include "Cliente.cpp"
+#include "Livro.cpp"
+#include "Emprestimo.cpp"
 using namespace std;
 
 class Biblioteca{
