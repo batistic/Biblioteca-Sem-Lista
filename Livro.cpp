@@ -124,7 +124,18 @@ int Livro::cadastrar_exemplares(){
 }
 
 int Livro::adicionar_emprestimo(){
+	int i;
+	for(i=0;i<nExemplares;i++){
+		if(exemplares[i].getDisp() == true){
+			exemplares[i].setDisp(false);
+			break;
+		}
+	}
 	emprestimos++;
+}
+
+int Livro::devolver_exemplar(int i){
+	exemplares[i].setDisp(true);
 }
 
 int Livro::adicionar_exemplar(){

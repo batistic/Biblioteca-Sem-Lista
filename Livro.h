@@ -15,6 +15,7 @@ class Livro{
 		int cadastrar_exemplares();
 		int adicionar_exemplar();
 		int adicionar_emprestimo();
+		int devolver_exemplar(int);
 		int remover_exemplar(int);
 		int exemplar_disp();
 		int disponivel();

@@ -70,6 +70,7 @@ int Biblioteca::realizar_devolucao(){
 	for(i=0;i<nEmprestimos;i++){
 		if(emprestimos[i].getLivro() == id_livro && emprestimos[i].getExemplar() == id_exemplar){
 			emprestimos[i].entregar(d);
+			livros[id_livro].devolver_exemplar(id_exemplar);
 			break;
 		}
 	}
@@ -136,7 +137,12 @@ int Biblioteca::remover_cliente(double n){
 }
 
 int Biblioteca::editar_cliente(double n){
-	consultar_cliente(n).editar_cadastro();
+	int i;
+	for(i=0;i<nClientes;i++){
+		if(clientes[i].get_CPF() == n){
+			clientes[i].editar_cadastro();
+		}
+	}
 }
 
 int Biblioteca::editar_livro(int n){

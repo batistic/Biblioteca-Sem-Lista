@@ -5,6 +5,8 @@ using namespace std;
 
 Cliente::Cliente(){
     ativo = false;
+    pendencia = 0;
+    multa = 0;
 }
 
 void Cliente::setCliente(){
@@ -59,8 +61,6 @@ void Cliente::setCliente(){
     std::cout << "Resposta invalida. Insira novamente o numero referente a modalidade." << '\n';
     }
   }
-  pendencia = 0;
-  multa = 0;
   ativo = true;
 }
 
@@ -123,83 +123,6 @@ int Cliente::editar_cadastro(){
 			  		break;
 		}
 	}
-/*
-  int resposta = 9;
-  string n;
-  std::cout << "1. CPF: " << CPF << '\n';
-  std::cout << "2. Nome: " << nome << '\n';
-  std::cout << "3. Sexo: " << sexo << '\n';
-  std::cout << "4. Data de nascimento: " << data_nasc[0] << "/" << data_nasc[1] << "/" << data_nasc[2] << '\n';
-  std::cout << "5. CEP: " << CEP << '\n';
-  std::cout << "6. Endereco: " << endereco << '\n';
-  std::cout << "7. Telefone: " << telefone << '\n';
-  std::cout << "8. Email: " << email << '\n';
-  std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair"<<endl;
-  std::cin >> resposta;
-  while(resposta != 0){
-  if(resposta == 1){
-    std::cout << "Insira o novo CPF: ";
-    std::cin >> CPF;
-  }
-  else if (resposta == 2){
-    std::cout << "Insira o novo nome: ";
-    setbuf(stdin,NULL);
-    std::getline(cin,nome);
-    setbuf(stdin,NULL);
-    //std::cin >> n;
-  }
-  else if (resposta == 3){
-    std::cout << "Insira o novo sexo (H | M): ";
-    std::cin >> sexo;
-  }
-  else if (resposta == 4){
-    std::cout << "Insira o novo dia da data de nascimento: ";
-    std::cin >> data_nasc[0];
-    std::cout << "Insira o novo mes da data de nascimento: ";
-    std::cin >> data_nasc[1];
-    std::cout << "Insira o novo ano da data de nascimento: ";
-    std::cin >> data_nasc[2];
-  }
-  else if (resposta == 5){
-    std::cout << "Insira o novo CEP: ";
-    std::cin >> CEP;
-  }
-  else if (resposta == 6){
-    std::cout << "Insira o novo endereco: ";
-    setbuf(stdin,NULL);
-    std::getline(cin,endereco);
-    setbuf(stdin,NULL);
-    //std::cin >> endereco;
-  }
-  else if (resposta == 7){
-    std::cout << "Insira o novo telefone: ";
-    std::cin >> telefone;
-  }
-  else if (resposta == 8){
-    std::cout << "Insira o novo email: ";
-    setbuf(stdin,NULL);
-    std::getline(cin,email);
-    setbuf(stdin,NULL);
-    //std::cin >> email;
-  }
-  else{
-    //system("cls");
-    std::cout << "Opcao invalida. Insira novamente o numero referente a informacao que deseja editar." << '\n';
-    std::cout << "1. CPF: " << CPF << '\n';
-  	std::cout << "2. Nome: " << nome << '\n';
-	std::cout << "3. Sexo: " << sexo << '\n';
-	std::cout << "4. Data de nascimento: " << data_nasc[3] << '\n';
-	std::cout << "5. CEP: " << CEP << '\n';
-	std::cout << "6. Endereco: " << endereco << '\n';
-	std::cout << "7. Telefone: " << telefone << '\n';
-	std::cout << "8. Email: " << email << '\n';
-  }
-  setbuf(stdin,NULL);
-    std::cout << "Insira o numero referente a informacao que deseja editar ou digite 0 para Sair"<<endl;
-    std::cin >> resposta;
-  }
-  return 0;
- */
 }
 
 void Cliente::adicionarEmprestimo(){
