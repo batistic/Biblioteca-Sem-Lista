@@ -21,6 +21,7 @@ int Biblioteca::cadastrar_cliente(){
 
 int Biblioteca::realizar_emprestimo(){
 	double cpf_cliente;
+	int i;
 	int id_livro, d1[3], d2[3];
 	cout << "Data do emprestimo:"<<endl<<"Dia: ";
 	cin >> d1[0];
@@ -41,7 +42,11 @@ int Biblioteca::realizar_emprestimo(){
 	if(livros[id_livro].disponivel() > 0){
 		emprestimos[nEmprestimos].setEmprestimo(cpf_cliente,id_livro,livros[id_livro].exemplar_disp(),d1,d2,nEmprestimos);
 		nEmprestimos++;
-		consultar_cliente(cpf_cliente).adicionarEmprestimo();
+		for(i=0;i<nClientes;i++){
+			if(cpf_cliente == clientes[i].get_CPF()){
+				clientes[i].adicionarEmprestimo();
+			}
+		}
 		livros[id_livro].adicionar_emprestimo();
 	}
 	else{
