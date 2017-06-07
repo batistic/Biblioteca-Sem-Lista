@@ -116,9 +116,9 @@ int Biblioteca::remover_exemplar(int n){
 }
 
 int Biblioteca::remover_cliente(double n){
-	int i;
+	int i,id;
 	for(i=0;i<nClientes;i++){
-		if(clientes[i].getCPF() == n){
+		if(clientes[i].get_CPF() == n){
 			id = i;
 			break;
 		}
