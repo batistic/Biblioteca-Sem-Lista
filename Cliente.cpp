@@ -96,12 +96,13 @@ int Cliente::editar_cadastro(){
   }
   else if (resposta == 2){
     std::cout << "Insira o novo nome: ";
-    std::cin >> n;
-    setNome(n);
     setbuf(stdin,NULL);
+    std::getline(cin,nome);
+    setbuf(stdin,NULL);
+    //std::cin >> n;
   }
   else if (resposta == 3){
-    std::cout << "Insira o novo sexo: ";
+    std::cout << "Insira o novo sexo (H | M): ";
     std::cin >> sexo;
   }
   else if (resposta == 4){
@@ -118,7 +119,10 @@ int Cliente::editar_cadastro(){
   }
   else if (resposta == 6){
     std::cout << "Insira o novo endereco: ";
-    std::cin >> endereco;
+    setbuf(stdin,NULL);
+    std::getline(cin,endereco);
+    setbuf(stdin,NULL);
+    //std::cin >> endereco;
   }
   else if (resposta == 7){
     std::cout << "Insira o novo telefone: ";
@@ -126,7 +130,10 @@ int Cliente::editar_cadastro(){
   }
   else if (resposta == 8){
     std::cout << "Insira o novo email: ";
-    std::cin >> email;
+    setbuf(stdin,NULL);
+    std::getline(cin,email);
+    setbuf(stdin,NULL);
+    //std::cin >> email;
   }
   else{
     //system("cls");

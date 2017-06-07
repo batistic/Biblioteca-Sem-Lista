@@ -42,6 +42,7 @@ int Biblioteca::realizar_emprestimo(){
 		emprestimos[nEmprestimos].setEmprestimo(cpf_cliente,id_livro,livros[id_livro].exemplar_disp(),d1,d2,nEmprestimos);
 		nEmprestimos++;
 		consultar_cliente(cpf_cliente).adicionarEmprestimo();
+		livros[id_livro].adicionar_emprestimo();
 	}
 	else{
 		cout << "Nenhum exemplar disponivel! Tente outro dia." << endl;

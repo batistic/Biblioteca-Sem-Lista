@@ -24,7 +24,7 @@ void Livro::setLivro(int n){
     //cin >> genero;
 	cout << "Editora: ";
 	setbuf(stdin,NULL);
-    std::getline(cin,nome);
+    std::getline(cin,editora);
     setbuf(stdin,NULL);
     //cin >> editora;
 	cout << "Edicao: ";
@@ -121,6 +121,10 @@ int Livro::cadastrar_exemplares(){
 		exemplares[i].setExemplar(i);
 	}
 	return 0;
+}
+
+int Livro::adicionar_emprestimo(){
+	emprestimos++;
 }
 
 int Livro::adicionar_exemplar(){

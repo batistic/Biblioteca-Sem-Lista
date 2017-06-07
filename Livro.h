@@ -14,6 +14,7 @@ class Livro{
 		void setQtd_exemplares(int);
 		int cadastrar_exemplares();
 		int adicionar_exemplar();
+		int adicionar_emprestimo();
 		int remover_exemplar(int);
 		int exemplar_disp();
 		int disponivel();

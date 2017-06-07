@@ -1,0 +1,6 @@
+In file included from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Biblioteca.cpp:5:0,
+                 from C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\main.cpp:4:
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.cpp: In member function 'void Livro::setLivro(int)':
+C:\Users\Gustavo\Desktop\Explorer\Programas\POO\Biblioteca-Sem-Lista\Livro.cpp:27:22: error: 'nome' was not declared in this scope
+     std::getline(cin,nome);
+                      ^
